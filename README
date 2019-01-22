@@ -15,6 +15,11 @@ npm install --save-dev shelljs
 npm install --save-dev jasmine-data-provider
 npm install --save-dev fs
 
+
+
+java -Dwebdriver.chrome.driver=/c/workspace/ProtractorTest/chromedriver_win32/chromedriver.exe -jar /c/workspace/ProtractorTest/selenium-server-standalone-3.141.59.jar -port 4444
+
+
 java -Dwebdriver.chrome.driver=/Users/shiva/workspace/ProtractorCucumberTest/node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.45 -Dwebdriver.gecko.driver=/Users/shiva/workspace/ProtractorCucumberTest/node_modules/protractor/node_modules/webdriver-manager/selenium/geckodriver-v0.23.0 -jar /Users/shiva/workspace/ProtractorCucumberTest/node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar -port 4444
 ./node_modules/protractor/bin/webdriver-manager update
 ./node_modules/.bin/protractor config/config.js
