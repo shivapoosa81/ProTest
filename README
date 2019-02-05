@@ -30,6 +30,26 @@ java -Dwebdriver.chrome.driver=/Users/shiva/workspace/ProtractorCucumberTest/nod
 --capabilities.username=shiva
 --cucumberOpts.tags="@" || error =true
 
+const input = [
+["task1","user1","user2"],
+["task2","user1","user2"],
+["task3","user9","user3"],
+["task4","user2","user6"],
+["task5","user3","user2"],
+["task9","user9","user9"],
+["task10","user9","user1"]
+];
+
+const output =  input.reduce( (accumulator, currentValue) => {
+const task = currentValue[0];
+const RO = currentValue[1];
+const EO = currentValue[2];
+accumulator[RO] = Array.from (new Set(accumulator[RO] ?  [...accumulator[RO], task] : [task]))
+accumulator[EO] = Array.from (new Set( accumulator[EO] ?  [...accumulator[EO], task] : [task]))
+return accumulator;
+}, {})
+
+console.log("OP is",output)
 
 cd ./ProtractorCucumberTest/
 npm install
